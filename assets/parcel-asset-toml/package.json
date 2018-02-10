@@ -1,0 +1,12 @@
+{
+  "name": "parcel-asset-toml",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "repository": "https://github.com/thejameskyle/parcel2",
+  "license": "MIT",
+  "author": "James Kyle <me@thejameskyle.com>",
+  "dependencies": {
+    "toml": "^2.3.3"
+  }
+}

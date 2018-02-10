@@ -1,0 +1,14 @@
+[ignore]
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+module.name_mapper='^parcel-\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/core/\1/src/index'
+module.name_mapper='^parcel-\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/assets/\1/src/index'
+module.name_mapper='^parcel-\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/config/\1/src/index'
+
+[strict]

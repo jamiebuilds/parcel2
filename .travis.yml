@@ -1,0 +1,19 @@
+git:
+  depth: 1
+sudo: false
+language: node_js
+node_js:
+  - '6'
+  - '8'
+cache:
+  yarn: true
+  cargo: true
+  directories:
+    - node_modules
+before_install:
+  - curl https://sh.rustup.rs -sSf | sh -s -- -y
+  - export PATH=/home/travis/.cargo/bin:$PATH
+script:
+  - yarn test
+  - yarn flow
+  - yarn lint
