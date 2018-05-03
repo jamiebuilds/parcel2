@@ -16,5 +16,5 @@ export default new Transform({
 
   async generate() {
     // ...
-  }
+  },
 });

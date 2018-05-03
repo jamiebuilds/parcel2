@@ -12,5 +12,5 @@ export default new Server({
 
   async disconnect() {
     // ...
-  }
+  },
 });

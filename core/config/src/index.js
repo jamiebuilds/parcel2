@@ -53,7 +53,7 @@ function normalizeConfig(config) {
           )
         ) {
           errors.push(
-            `"assets" must be an object map of strings to arrays of strings`
+            `"assets" must be an object map of strings to arrays of strings`,
           );
         } else {
           Object.keys(configValue).map(key => {
@@ -80,7 +80,7 @@ function normalizeConfig(config) {
 
   let normalized = {
     extends: extended,
-    assets
+    assets,
   };
 
   return { normalized, errors };
@@ -94,7 +94,7 @@ export async function resolveConfig(filePath: string) {
   if (errors.length) {
     throw new TypeError(
       `Parcel config at "${configPath}" contains these errors:\n` +
-        errors.map(error => ` - ${error}`).join('\n')
+        errors.map(error => ` - ${error}`).join('\n'),
     );
   }
 
@@ -103,10 +103,10 @@ export async function resolveConfig(filePath: string) {
   let parentConfigs = Promise.all(
     extended.map(ext => {
       return resolveConfig(resolveFrom(configPath, ext));
-    })
+    }),
   );
 
   return {
-    assets
+    assets,
   };
 }
