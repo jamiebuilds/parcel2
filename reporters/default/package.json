@@ -1,0 +1,42 @@
+{
+  "name": "@parcel/reporter-default",
+  "version": "0.0.0",
+  "description": "Parcel default reporter",
+  "main": "lib/index.js",
+  "repository": "https://github.com/parcel/parcel",
+  "homepage": "https://github.com/parcel/parcel/tree/master/reporters/default",
+  "bugs":
+    "https://github.com/parcel/parcel/issues/new?template=reporter&title=reporter-default:+[Title+of+issue]",
+  "license": "MIT",
+  "author": "Parcel Contributors (https://opencollective.com/parcel)",
+  "contributors": [
+    "Devon Govett <devongovett@gmail.com> (https://github.com/devongovett)",
+    "Jamie Kyle <me@thejameskyle.com> (https://jamie.build)"
+  ],
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/parcel"
+  },
+  "files": ["lib/"],
+  "keywords": [
+    "parcel",
+    "bundler",
+    "reporter",
+    "web",
+    "packager",
+    "webpack",
+    "browserify",
+    "loader",
+    "default"
+  ],
+  "engines": {
+    "node": ">=6.x",
+    "parcel": "2.x"
+  },
+  "dependencies": {
+    "@parcel/plugin": "^0.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0"
+  }
+}

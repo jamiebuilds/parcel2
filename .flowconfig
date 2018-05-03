@@ -1,14 +1,46 @@
 [ignore]
 
-[include]
-
-[libs]
-
 [lints]
 
-[options]
-module.name_mapper='^parcel-\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/core/\1/src/index'
-module.name_mapper='^parcel-\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/assets/\1/src/index'
-module.name_mapper='^parcel-\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/config/\1/src/index'
+# We're going to be as strict as possible with types as long as we can
+all=error
 
-[strict]
+[options]
+
+# Map imports to internal packages to their location in the repo instead of searching from node_modules
+module.name_mapper='^@parcel\/config-\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/configs/\1/src/index'
+module.name_mapper='^@parcel\/loader-\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/loaders/\1/src/index'
+module.name_mapper='^@parcel\/packager-\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/packagers/\1/src/index'
+module.name_mapper='^@parcel\/reporter-\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/reporters/\1/src/index'
+module.name_mapper='^@parcel\/resolver-\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/resolvers/\1/src/index'
+module.name_mapper='^@parcel\/server-\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/servers/\1/src/index'
+module.name_mapper='^@parcel\/transform-\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/transforms/\1/src/index'
+module.name_mapper='^@parcel\/\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/core/\1/src/index'
+
+# Enable `class { properties }` (I want to believe)
+esproposal.class_instance_fields=enable
+esproposal.class_static_fields=enable
+
+# Let's not use the `export * as` syntax, it sounds like it will be rejected by TC39 (disabled by default)
+# esproposal.export_star_as=disable
+
+# Let's not use decorators... they are a mess of a proposal (disabled by default)
+# esproposal.decorators=disable
+
+# Treat function params as constants, feel free to disable this if it's not helping
+experimental.const_params=true
+
+# Output warnings in error output
+include_warnings=true
+
+# Babel automatically adds `"use strict";`
+module.use_strict=true
+
+# Pleas use `$FlowFixMe` instead of `any`
+suppress_type=$FlowFixMe
+
+# Cause duh
+emoji=true
+
+# Never set this to `true`, it is a bad idea
+all=false

@@ -1,9 +1,0 @@
-{
-  "name": "parcel-asset-html",
-  "version": "1.0.0",
-  "description": "",
-  "main": "lib/index.js",
-  "repository": "https://github.com/thejameskyle/parcel2",
-  "license": "MIT",
-  "author": "James Kyle <me@thejameskyle.com>"
-}

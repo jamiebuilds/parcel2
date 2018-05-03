@@ -2,14 +2,23 @@
   "name": "parcel2",
   "version": "0.0.0",
   "description": "Experiment",
-  "repository": "https://github.com/thejameskyle/parcel2",
-  "author": "James Kyle <me@thejameskyle.com>",
+  "repository": "https://github.com/parcel/parcel",
+  "author": "Parcel Contributors",
   "license": "MIT",
   "engines": {
     "node": ">= 8.0.0"
   },
   "bolt": {
-    "workspaces": ["core/*", "assets/*", "configs/*"]
+    "workspaces": [
+      "core/*",
+      "loaders/*",
+      "configs/*",
+      "packagers/*",
+      "reporters/*",
+      "resolvers/*",
+      "servers/*",
+      "transforms/*"
+    ]
   },
   "scripts": {
     "lint": "eslint .",
@@ -26,7 +35,7 @@
     "json5": "^0.5.1",
     "resolve-from": "^4.0.0",
     "toml": "^2.3.3",
-    "util.promisify": "^1.0.0"
+    "typeable-promisify": "^2.0.1"
   },
   "devDependencies": {
     "ava": "^0.25.0",
@@ -39,7 +48,7 @@
     "babel-preset-flow": "^6.23.0",
     "cross-env": "^5.1.3",
     "eslint": "^4.17.0",
-    "flow-bin": "^0.65.0",
+    "flow-bin": "^0.71.0",
     "flow-copy-source": "^1.3.0",
     "husky": "^0.14.3",
     "lint-staged": "^6.1.0",

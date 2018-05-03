@@ -1,9 +1,0 @@
-{
-  "name": "parcel-config-base",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.json",
-  "repository": "https://github.com/thejameskyle/parcel2",
-  "license": "MIT",
-  "author": "James Kyle <me@thejameskyle.com>"
-}

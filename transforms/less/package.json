@@ -1,0 +1,43 @@
+{
+  "name": "@parcel/transform-less",
+  "version": "0.0.0",
+  "description": "Parcel transform for Less",
+  "main": "lib/index.js",
+  "repository": "https://github.com/parcel/parcel",
+  "homepage": "https://github.com/parcel/parcel/tree/master/transforms/less",
+  "bugs":
+    "https://github.com/parcel/parcel/issues/new?template=transform&title=transform-less:+[Title+of+issue]",
+  "license": "MIT",
+  "author": "Parcel Contributors (https://opencollective.com/parcel)",
+  "contributors": [
+    "Devon Govett <devongovett@gmail.com> (https://github.com/devongovett)",
+    "Jamie Kyle <me@thejameskyle.com> (https://jamie.build)"
+  ],
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/parcel"
+  },
+  "files": ["lib/"],
+  "keywords": [
+    "parcel",
+    "bundler",
+    "transform",
+    "web",
+    "packager",
+    "webpack",
+    "browserify",
+    "loader",
+    "less",
+    "css"
+  ],
+  "engines": {
+    "node": ">=6.x",
+    "parcel": "2.x"
+  },
+  "dependencies": {
+    "@parcel/plugin": "^0.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0"
+  }
+}
