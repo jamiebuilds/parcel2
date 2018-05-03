@@ -4,10 +4,8 @@
   "description": "Parcel transform for CoffeeScript",
   "main": "lib/index.js",
   "repository": "https://github.com/parcel/parcel",
-  "homepage":
-    "https://github.com/parcel/parcel/tree/master/transforms/coffescript",
-  "bugs":
-    "https://github.com/parcel/parcel/issues/new?template=transform&title=transform-coffescript:+[Title+of+issue]",
+  "homepage": "https://github.com/parcel/parcel/tree/master/transforms/coffescript",
+  "bugs": "https://github.com/parcel/parcel/issues/new?template=transform&title=transform-coffescript:+[Title+of+issue]",
   "license": "MIT",
   "author": "Parcel Contributors (https://opencollective.com/parcel)",
   "contributors": [
@@ -18,7 +16,9 @@
     "type": "opencollective",
     "url": "https://opencollective.com/parcel"
   },
-  "files": ["lib/"],
+  "files": [
+    "lib/"
+  ],
   "keywords": [
     "parcel",
     "bundler",

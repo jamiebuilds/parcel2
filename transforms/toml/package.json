@@ -5,8 +5,7 @@
   "main": "lib/index.js",
   "repository": "https://github.com/parcel/parcel",
   "homepage": "https://github.com/parcel/parcel/tree/master/transforms/toml",
-  "bugs":
-    "https://github.com/parcel/parcel/issues/new?template=transform&title=transform-toml:+[Title+of+issue]",
+  "bugs": "https://github.com/parcel/parcel/issues/new?template=transform&title=transform-toml:+[Title+of+issue]",
   "license": "MIT",
   "author": "Parcel Contributors (https://opencollective.com/parcel)",
   "contributors": [
@@ -17,7 +16,9 @@
     "type": "opencollective",
     "url": "https://opencollective.com/parcel"
   },
-  "files": ["lib/"],
+  "files": [
+    "lib/"
+  ],
   "keywords": [
     "parcel",
     "bundler",

@@ -16,7 +16,9 @@
     "type": "opencollective",
     "url": "https://opencollective.com/parcel"
   },
-  "files": ["lib/"],
+  "files": [
+    "lib/"
+  ],
   "keywords": [
     "parcel",
     "bundler",
