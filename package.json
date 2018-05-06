@@ -10,21 +10,20 @@
   },
   "bolt": {
     "workspaces": [
-      "core/*",
-      "loaders/*",
-      "configs/*",
-      "packagers/*",
-      "reporters/*",
-      "resolvers/*",
-      "servers/*",
-      "transforms/*"
+      "src/configs/*",
+      "src/core/*",
+      "src/loaders/*",
+      "src/packagers/*",
+      "src/reporters/*",
+      "src/resolvers/*",
+      "src/servers/*",
+      "src/transforms/*"
     ]
   },
   "scripts": {
     "lint": "eslint .",
     "format": "prettier --write '**/*.{js,json,md}'",
-    "build":
-      "bolt workspaces exec --ignore-fs 'config/*' -- babel src -d lib && flow-copy-source src lib",
+    "build": "bolt workspaces exec --ignore-fs 'config/*' -- babel src -d lib && flow-copy-source src lib",
     "flow": "flow",
     "test": "ava",
     "precommit": "lint-staged"
@@ -56,6 +55,9 @@
     "sinon": "^4.2.2"
   },
   "lint-staged": {
-    "*.{js,json,md}": ["prettier --write", "git add"]
+    "*.{js,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
