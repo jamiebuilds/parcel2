@@ -1,13 +1,9 @@
 // @flow
 export default {
-  resolver: '@parcel/resolver-base',
-  servers: ['@parcel/server-typescript'],
+  resolver: '@parcel/resolver-default',
+  strategy: '@parcel/strategy-default',
   transforms: {
-    '*.{babel,jsx,es6}': ['@parcel/transform-babel'],
-    '*.{js,mjs,jsm}': [
-      '@parcel/transform-babel',
-      '@parcel/transform-javascript',
-    ],
+    '*.{js,mjs,jsm,babel,jsx,es6}': ['@parcel/transform-babel'],
     '*.{ml,re}': ['@parcel/transform-reason'],
     '*.{ts,tsx}': ['@parcel/transform-typescript'],
     '*.coffee': ['@parcel/transform-coffeescript'],
@@ -25,9 +21,27 @@ export default {
     '*.vue': ['@parcel/transform-vue'],
     '*.wasm': ['@parcel/transform-wasm'],
     '*.webmanifest': ['@parcel/transform-webmanifest'],
-    '*.{png,jpeg,jpg,svg,gif,webp,tiff,pdf,bmp,ico}': ['@parcel/transform-raw'],
-    '*.{ttf,otf,woff,woff2,svg,eot}': ['@parcel/transform-raw'],
-    '*.{pdf}': ['@parcel/transform-raw'],
+    '*.{png,jpeg,jpg,svg,gif,webp,tiff,bmp,ico}': ['@parcel/transform-image'],
+    '*.{ttf,otf,woff,woff2,svg,eot}': ['@parcel/transform-font'],
   },
-  packagers: {},
+  packagers: {
+    '*.js': '@parcel/packager-js',
+    '*.css': '@parcel/packager-css',
+    '*.html': '@parcel/packager-html',
+    '*.wasm': '@parcel/packager-wasm',
+    '*': '@parcel/packager-raw',
+  },
+  optimizer: {
+    '*.js': ['@parcel/optimizer-uglify'],
+    '*.css': ['@parcel/optimizer-cssnano'],
+    '*.html': ['@parcel/optimizer-htmlnano'],
+    '*.{png,jpg,jpeg,svg,gif,webp,tiff,pdf,bmp}': [
+      '@parcel/optimizer-imagemin',
+    ],
+  },
+  loaders: {
+    '*.js': ['@parcel/loader-js'],
+    '*.wasm': ['@parcel/loader-wasm'],
+    '*.css': ['@parcel/loader-css'],
+  },
 };

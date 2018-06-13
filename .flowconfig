@@ -8,14 +8,14 @@ all=error
 [options]
 
 # Map imports to internal packages to their location in the repo instead of searching from node_modules
-module.name_mapper='^@parcel\/config-\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/configs/\1/src/index'
-module.name_mapper='^@parcel\/loader-\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/loaders/\1/src/index'
-module.name_mapper='^@parcel\/packager-\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/packagers/\1/src/index'
-module.name_mapper='^@parcel\/reporter-\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/reporters/\1/src/index'
-module.name_mapper='^@parcel\/resolver-\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/resolvers/\1/src/index'
-module.name_mapper='^@parcel\/server-\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/servers/\1/src/index'
-module.name_mapper='^@parcel\/transform-\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/transforms/\1/src/index'
-module.name_mapper='^@parcel\/\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/core/\1/src/index'
+module.name_mapper='^@parcel\/config-\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/src/configs/\1/src/index'
+module.name_mapper='^@parcel\/loader-\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/src/loaders/\1/src/index'
+module.name_mapper='^@parcel\/packager-\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/src/packagers/\1/src/index'
+module.name_mapper='^@parcel\/reporter-\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/src/reporters/\1/src/index'
+module.name_mapper='^@parcel\/resolver-\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/src/resolvers/\1/src/index'
+module.name_mapper='^@parcel\/server-\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/src/servers/\1/src/index'
+module.name_mapper='^@parcel\/transform-\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/src/transforms/\1/src/index'
+module.name_mapper='^@parcel\/\([a-zA-Z0-9_\-]+\)$' -> '<PROJECT_ROOT>/src/core/\1/src/index'
 
 # Enable `class { properties }` (I want to believe)
 esproposal.class_instance_fields=enable

@@ -11,7 +11,7 @@ type JSONValue =
   | Array<JSONValue>
   | { [key: string]: JSONValue };
 
-export function findClosestConfig(filePath: string): Promise<string> {
+export function findClosestConfig(filePath: string): Promise<string | null> {
   return findUp('.parcelrc', { cwd: filePath });
 }
 
@@ -88,6 +88,10 @@ function normalizeConfig(config) {
 
 export async function resolveConfig(filePath: string) {
   let configPath = await findClosestConfig(filePath);
+  if (configPath === null) {
+    throw new Error('Missing .parcelrc');
+  }
+
   let config = await loadConfig(configPath);
   let { normalized, errors } = normalizeConfig(config);
 

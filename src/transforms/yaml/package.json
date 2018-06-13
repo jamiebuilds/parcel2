@@ -10,6 +10,8 @@
   "author": "Parcel Contributors (https://opencollective.com/parcel)",
   "contributors": [
     "Devon Govett <devongovett@gmail.com> (https://github.com/devongovett)",
+    "Jasper De Moor <jasperdemoor@gmail.com> (http://jasperdemoor.me)",
+    "Fathy Boundjadj <fathy.boundjadj@gmail.com> (https://github.com/fathyb)",
     "Jamie Kyle <me@thejameskyle.com> (https://jamie.build)"
   ],
   "collective": {
@@ -36,6 +38,7 @@
   },
   "dependencies": {
     "@parcel/plugin": "^0.0.0",
+    "babel-runtime": "^6.26.0",
     "js-yaml": "^3.10.0"
   },
   "devDependencies": {

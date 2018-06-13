@@ -23,18 +23,25 @@
   "scripts": {
     "lint": "eslint .",
     "format": "prettier --write '**/*.{js,json,md}'",
-    "build": "bolt workspaces exec --ignore-fs 'config/*' -- babel src -d lib && flow-copy-source src lib",
+    "build": "bolt build:babel && bolt build:flow",
+    "build:babel": "bolt workspaces exec -- babel src -d lib",
+    "build:flow": "bolt workspaces exec -- flow-copy-source src lib",
     "flow": "flow",
     "test": "ava",
     "precommit": "lint-staged"
   },
   "dependencies": {
+    "babel-runtime": "^6.26.0",
+    "fast-glob": "^2.2.1",
     "find-up": "^2.1.0",
     "js-yaml": "^3.10.0",
     "json5": "^0.5.1",
+    "micromatch": "^3.1.10",
     "resolve-from": "^4.0.0",
+    "semver": "^5.5.0",
     "toml": "^2.3.3",
-    "typeable-promisify": "^2.0.1"
+    "typeable-promisify": "^2.0.1",
+    "uuid": "^3.2.1"
   },
   "devDependencies": {
     "ava": "^0.25.0",
